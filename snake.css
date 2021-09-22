@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    overscroll-behavior: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.gamebox__head {
+    display: flex;
+    justify-content: space-between;
+}
+.gamebox__head > * {
+    height: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.gamebox__control {
+    width: 85px;
+    color: darkorange;
+    border: 2px solid darkorange;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+}
+.gamebox__control_dim {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* centering for Firefox */
+    -moz-padding-end: 3px;
+    text-align: center;
+    /* centering for Chrome */
+    text-align-last: center;
+}
+.gamebox__control_dim::-ms-expand {
+    display: none;
+}
+.gamebox__control_dim:disabled {
+    cursor: default;
+}
+.gamebox__control_btn {
+    text-transform: uppercase;
+}
+.gamebox__control_dim:enabled:hover,
+.gamebox__control_btn:hover {
+    color: white;
+    background-color: darkorange;
+}
+.gamebox__score {
+    width: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(1, 163, 1);;
+}
+.gamebox__info {
+    display: none;
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.field {
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid darkorange;
+}
+.field td {
+    height: 23px;
+    width: 23px;
+    border: 1px solid #ccc;
+}
+.snake-head {
+    background-color: rgb(0, 70, 0)
+}
+.snake-sect {
+    background-color: rgb(1, 163, 1);
+}
+.snake-gray {
+    background-color: dimgray;
+}
+.apple {
+    background-color: darkorange
+}
+
+@media screen and (max-width: 1024px) {
+    .gamebox__info {
+        display: block;
+    }
+}
